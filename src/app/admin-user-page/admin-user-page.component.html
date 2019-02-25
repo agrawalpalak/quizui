@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <div class="container">
+      <h1 style="background-color:#f1f1f1">User Result</h1>
+      <table>
+        <tr>
+          <th>No. of user</th>
+          <th>Score</th>
+          <th>Status</th>
+        </tr>
+        <tr *ngFor= "let a of NoOfUser">
+          <td>{{a.user}}</td>
+          <td>{{a.score}}</td>
+          <td>{{a.status}}</td>
+        </tr>
+      </table>
+      <br>
+      <button type="button" class="cancelbtn" routerLink="/AdminStartPageComponent">Exit</button>
+    </div>
+  </body>
+</html>

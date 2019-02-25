@@ -1,0 +1,18 @@
+<form>
+<div class="container">
+<table>
+    <tr>
+      <th>Questions</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor = "let a of que">
+      <td>{{a.question}}</td>
+      <td><button class="deletebtn" (click)="deleteQuestionById(a.id)">Delete</button> &nbsp; &nbsp;
+         <button class="editbtn" routerLink="/AddQuestionComponent">Edit</button> </td>
+    </tr>
+    
+  </table>
+
+  <button class="exitbtn" routerLink="/AdminStartPageComponent">Exit</button>
+</div>
+</form>

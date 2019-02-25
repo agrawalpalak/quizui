@@ -1,0 +1,23 @@
+.container{
+    border: 3px solid #f1f1f1;
+    width: 50%;
+    height: 50%;
+    margin-left: 30%;
+}
+h1{
+    text-align: center;
+}
+.contain{
+    margin-left: 2%;
+}
+button{
+    background-color: #4CAF50;
+    margin-left: 30%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 30%;
+}

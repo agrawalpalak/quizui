@@ -1,0 +1,36 @@
+<form>
+  <!-- ques 1 -->
+<div class="container" >
+  <h2>Kubernetes Test </h2>
+  <h3>Time Left : {{countDown | async | formatTime}} </h3>
+  
+  <div *ngFor="let a of que">
+  <h3>{{a.question}}</h3>
+  <div>
+      <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+      <label for="question-1-answers-A">{{a.option1}} </label>
+  </div>
+  
+  <div>
+      <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+      <label for="question-1-answers-B">{{a.option2}}</label>
+  </div>
+  
+  <div>
+      <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+      <label for="question-1-answers-C">{{a.option3}}</label>
+  </div>
+  
+  <div>
+      <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
+      <label for="question-1-answers-D">{{a.option4}}</label>
+  </div>
+</div>
+ 
+  <div>
+    <button type="submit" class="registerbtn" routerLink="/ResultComponent">Submit</button>
+  </div>
+
+</div>
+
+</form>

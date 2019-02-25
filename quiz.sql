@@ -1,0 +1,11 @@
+insert into questions values (1,"What are the benefits of doing container orchestration? Select the correct answer", "Fault-tolerance","Optimal use of resources", "Scaling the applications","All of the above",4),
+(2,"What is Kubernetes licensed under? Select the correct answer", "GPLv2 incorrect","MIT", "Apache License Version 2.0","None of the above",3),
+(3,"In which programming language is Kubernetes written? Select the correct answer.", "Python","C++", "Java","Go",4),
+(4,"Which of the following is a component of a master node? Select the correct answer.","Scheduler","Controller manager","API server","All of the above",4),
+(5,"To do any administrative task, an administrator connects to ____________. Select the correct answer.","kubelet","API server","etcd","None of the above",2),
+(6,"Which of the following are Kubernetes installation tools? Select all answers that apply.","Kops","kubeadm","KubeSpray (formerly known as Kargo)","All of the above",4),
+(7,"What can we do with Minikube? Select the correct answer.","Set up an all-in-one Kubernetes cluster on our workstation","Set up a multi-node cluster","Set-up and etcd cluster","None of the above",1),
+(7,"On which of the following systems can Minikube be installed on? Select the correct answer.","Linux","Windows","macOS","All of the above",4),
+(8,"How can we access the cluster? Select the correct answer.","Via APIs","Via GUI","Via CLI","All of the above",4),
+(9,"While starting Minikube, a configuration file, 'config', gets created by default inside what directory on Linux? Select the correct answer.","/tmp"," /home/user/.kube","/root","/home/user",2),
+(10,"Which of the following commands do we use to open up a proxy port on localhost for the Kubernetes cluster? Select the correct answer.","kubectl create","kubectl proxy ","kubectl localhost","kubectl proxy create",2);

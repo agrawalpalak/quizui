@@ -1,0 +1,32 @@
+<form [formGroup]="questionForm">
+    <div class="container">
+      <h1>Add Question</h1>
+      
+      <hr>
+     
+      <label for="question"><b>Question :</b></label>
+      <br>
+      <textarea rows="4" cols="50" placeholder="Enter Question" formControlName="question" required></textarea>
+   
+      <br><br><label for="option1"><b>Option 1 :</b></label>
+      <input type="text" placeholder="Enter Option 1" formControlName="option1" required>
+  
+      <label for="option2"><b>Option 2</b></label>
+      <input type="text" placeholder="Enter Option 2" formControlName="option2" required>
+
+      <label for="option3"><b>Option 3:</b></label>
+      <input type="text" placeholder="Enter Option 3" formControlName="option3" required>
+
+      <label for="option4"><b>Option 4:</b></label>
+      <input type="text" placeholder="Enter Option 4" formControlName="option4" required>
+
+      <label for="answer"><b> Answer : </b></label>
+
+      <label for="answera"><b> Correct Answer </b></label>
+      <input type="text"  formControlName="answer" >
+
+      
+      <br><br><button type="submit" class="registerbtn" (click) = "addQuestion()">Continue</button>
+    </div>
+  
+  </form>

@@ -1,0 +1,41 @@
+.container {
+    padding: 16px;
+    width: 50%;
+    height: 50%;
+    align-content: center;
+    align-items: center;
+    border: 3px solid #f1f1f1;
+    margin-left: 30%;
+    }
+
+h1{
+    text-align: center;
+}
+
+.testbtn {
+    background-color: #4d4c58;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+    margin-left: 20%;
+    height: 40%;
+}
+
+.userbtn {
+  background-color: #4d4c58;
+  color: white;
+  padding: 16px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+  margin-left: 10%;
+  height: 40%;
+    
+
+}
