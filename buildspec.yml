@@ -2,7 +2,7 @@ version: 0.2
 
 env:
     variables:
-        S3_BUCKET: "arn:aws:s3:::codepipelinewebapp-project"
+        S3_BUCKET: "codepipelinewebapp-project"
 APP_NAME: "WebApp"
 BUILD_ENV : "prod"
 
