@@ -27,10 +27,10 @@ phases:
         - npm install
 
 build:
-        commands:
-        # Builds Angular application. You can also build using custom environment here like mock or staging
-        - echo Build started on `date`
-        - ng build --${BUILD_ENV}
+    commands:
+    # Builds Angular application. You can also build using custom environment here like mock or staging
+    - echo Build started on `date`
+    - ng build --${BUILD_ENV}
 
 post_build:
         commands:
