@@ -25,7 +25,6 @@ phases:
         - npm install -g @angular/cli
         # Install node dependancies.
         - npm install
-
       pre_build:
         commands:
         - echo "Pre Build"
@@ -34,7 +33,6 @@ phases:
         # Builds Angular application. You can also build using custom environment here like mock or staging
         - echo Build started on `date`
         - ng build --${BUILD_ENV}
-
       post_build:
         commands:
         # Clear S3 bucket.
