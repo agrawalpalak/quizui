@@ -44,6 +44,6 @@ post_build:
 artifacts:
     files:
         - '**/*'
-    discard-paths: yes
-    base-directory: 'dist'
+    #discard-paths: yes
+    base-directory: './dist'
     
