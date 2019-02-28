@@ -3,7 +3,7 @@ APP_NAME: WebApp
 BUILD_ENV: prod
 env: 
   variables: 
-    S3_BUCKET: sumeets3pipeline
+    S3_BUCKET: angular-ui-webapp
 phases: 
   build: 
     commands: 
