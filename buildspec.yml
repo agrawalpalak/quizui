@@ -5,11 +5,6 @@ env:
   variables: 
     S3_BUCKET: sumeets3pipeline
 phases: 
-  artifacts: 
-    base-directory: dist*
-    discard-paths: true
-    files: 
-      - /
   build: 
     commands: 
       - "echo Build started on `date`"
