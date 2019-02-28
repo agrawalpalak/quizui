@@ -1,20 +1,20 @@
 <html>
-  <form>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
     <h1>Login</h1>
     <div class="imgcontainer">
       <img src="/assets/loginImage.jfif" alt="Avatar" class="avatar">
     </div>
   
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" formControlName="username" required>
   
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" formControlName="password" required>
   
-      <button class="submit" type="submit" routerLink="/InstructionPageComponent"
-      routerLinkActive="active">Login</button><br>
-      
+      <!-- <button class="submit" type="submit" [disabled]="!loginForm.valid" routerLink="/InstructionPageComponent"
+      routerLinkActive="active">Login</button><br> -->
+      <button class="submit" type="submit" [disabled]="!loginForm.valid">Login</button><br>
      
     </div>
   

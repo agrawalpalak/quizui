@@ -16,9 +16,10 @@ import { DeleteQuestionComponent } from './delete-question/delete-question.compo
 // import { HttpModule } from '@angular/http';
     import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule, Routes }   from '@angular/router';
-
+import { StorageServiceModule} from 'angular-webstorage-service';
 const routes: Routes = [
   { path: '', component: AdminLoginComponent },
+  { path: 'login', component: AdminLoginComponent },
   { path: 'RegisterComponent', component: RegisterComponent },
   { path: 'InstructionPageComponent', component: InstructionPageComponent },
   { path: 'ResultComponent', component: ResultComponent },
@@ -52,6 +53,7 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    StorageServiceModule,
     RouterModule.forRoot(routes)
   ],
   providers: [HttpClientModule],

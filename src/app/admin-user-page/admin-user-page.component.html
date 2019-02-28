@@ -1,17 +1,32 @@
 <html>
   <body>
     <div class="container">
-      <h1 style="background-color:#f1f1f1">User Result</h1>
+      <h1 style="background-color:#f1f1f1">Users</h1>
       <table>
         <tr>
-          <th>No. of user</th>
+          <th>Sr. No</th>
+          <th>Score</th>
+          <th>Result</th>
+        </tr>
+        <tr *ngFor= "let a of users; let i=index;">
+          <td>{{i+1}}</td>
+          <td>{{a.name}}</td>
+          <td><button (click)="getResultByUserId(a.id)">View Result Data</button></td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <h2 style="background-color:#f1f1f1">Result</h2>
+      <table>
+        <tr>
+          <th>Sr. No</th>
           <th>Score</th>
           <th>Status</th>
         </tr>
-        <tr *ngFor= "let a of NoOfUser">
-          <td>{{a.user}}</td>
-          <td>{{a.score}}</td>
-          <td>{{a.status}}</td>
+        <tr *ngFor="let r of result; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{r.score}}</td>
+          <td>{{r.status}}</td>
         </tr>
       </table>
       <br>

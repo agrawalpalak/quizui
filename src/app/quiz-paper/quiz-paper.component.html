@@ -1,11 +1,11 @@
-<form>
-  <!-- ques 1 -->
+<!-- <form (ngSubmit)="submitTest()">
+ 
 <div class="container" >
   <h2>Kubernetes Test </h2>
   <h3>Time Left : {{countDown | async | formatTime}} </h3>
   
-  <div *ngFor="let a of que">
-  <h3>{{a.question}}</h3>
+  <div *ngFor="let a of quePaper;let i=index;">
+  <h3>{{i+1}}. {{a.question}}</h3>
   <div>
       <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
       <label for="question-1-answers-A">{{a.option1}} </label>
@@ -33,4 +33,40 @@
 
 </div>
 
+</form> -->
+<!-- display the questions one by one and change using the next button-->
+<form>
+    <div class="container" >
+        <h2>Kubernetes Test </h2>
+        <h3>Time Left : {{countDown | async | formatTime}} </h3>
+  <div>
+    {{currentIndex+1}}. {{quePaper[currentIndex].question}} 
+  </div>
+  <div>
+      <input type="radio" name="question-1-answers" id="question-1-answers-A" [(ngModel)]="opt1" value="1" />
+      <label for="question-1-answers-A">{{quePaper[currentIndex].option1}} </label>
+  </div>
+  
+  <div>
+      <input type="radio" [(ngModel)]="opt1" name="question-1-answers" id="question-1-answers-B" value="2" />
+      <label for="question-1-answers-B">{{quePaper[currentIndex].option2}}</label>
+  </div>
+  
+  <div>
+      <input type="radio" [(ngModel)]="opt1" name="question-1-answers" id="question-1-answers-C" value="3" />
+      <label for="question-1-answers-C">{{quePaper[currentIndex].option3}}</label>
+  </div>
+  
+  <div>
+      <input type="radio" [(ngModel)]="opt1" name="question-1-answers" id="question-1-answers-D" value="4" />
+      <label for="question-1-answers-D">{{quePaper[currentIndex].option4}}</label>
+  </div>
+  
+    <div class="col-3">
+      <button (click)="prev()">Prev</button>
+      <button *ngIf="!showSubmit" (click)="next()">Next</button>
+      <button *ngIf="showSubmit" (click)="submitTest()">Submit</button>
+    </div>
+  
+  </div>
 </form>

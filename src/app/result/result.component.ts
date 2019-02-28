@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-result',
@@ -8,9 +9,13 @@ import { AuthService } from '../services/auth.service';
 })
 export class ResultComponent implements OnInit {
 
-  constructor(private auth: AuthService) { }
+  score: any;
+  constructor(private auth: AuthService, private aroute:ActivatedRoute) { }
 
   ngOnInit() {
-  }
+    this.aroute.queryParams.subscribe(params => {
+      this.score = params.score;
+    })
+    }
 
 }
