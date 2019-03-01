@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../services/rest.service';
 import {FormGroup, FormControl} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-question',
@@ -19,7 +20,7 @@ export class AddQuestionComponent implements OnInit {
   });
   que : any = {};
   
-  constructor(private rest: RestService) { }
+  constructor(private rest: RestService, private router: Router) { }
 
   ngOnInit() {
     
@@ -27,6 +28,10 @@ export class AddQuestionComponent implements OnInit {
   addQuestion(){
     console.log(this.questionForm.value);
     this.rest.addQuestion(this.questionForm.value)
-    .subscribe(que => { console.log(que);});
+    .subscribe(que => { 
+      console.log(que);
+      alert("Question added successfully");
+      this.router.navigate(['AdminTestPageComponent']);
+    });
   }
 }

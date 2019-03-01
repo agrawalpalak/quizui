@@ -1,5 +1,6 @@
 <form>
 <div class="container">
+<h1>Questions</h1>
 <table>
     <tr>
       <th>Questions</th>
@@ -8,7 +9,7 @@
     <tr *ngFor = "let a of que">
       <td>{{a.question}}</td>
       <td><button class="deletebtn" (click)="deleteQuestionById(a.id)">Delete</button> &nbsp; &nbsp;
-         <button class="editbtn" routerLink="/AddQuestionComponent">Edit</button> </td>
+         <!-- <button class="editbtn" routerLink="/AddQuestionComponent">Edit</button> </td> -->
     </tr>
     
   </table>

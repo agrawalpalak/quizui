@@ -22,6 +22,11 @@ export class AuthService {
     console.log("auth called");
     return this.http.get<any>(BASE_URL + "getAllUsers", this.httpOptions).pipe(map(this.extractData));
   }
+
+  registerUser(user): Observable<any>
+  {
+    return this.http.post(BASE_URL+"registerUser", user, this.httpOptions).pipe();
+  }
   private extractData(res: Response) {
     let body = res;
     return body || { };
