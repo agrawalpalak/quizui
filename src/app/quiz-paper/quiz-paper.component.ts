@@ -70,6 +70,7 @@ export class QuizPaperComponent implements OnInit {
     score.userid = user.id.toString();
     this.rest.updateScore(score).subscribe(resp => {
       console.log(resp);
+      alert("Test submitted successfully");
       this.router.navigate(['ResultComponent'],{queryParams: score});
     })
   }
