@@ -9,18 +9,17 @@ table {
     border-collapse: collapse;
     width: 95%;
     margin-left: 2%;
-  }
-  td, th {
+}
+td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-  }
-  .cancelbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    margin-left: 50%;
-  }
+}
+.cancelbtn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 40%;
+}

@@ -39,19 +39,16 @@ export class RestService {
     return this.http.get<any>(BASE_URL + "getAllUsers", this.httpOptions).pipe(map(this.extractData));
   }
 
-  getResult(userid)
-  {
+  getResult(userid){
     return this.http.get<any>(BASE_URL + "getResultById/" + userid, this.httpOptions).pipe(map(this.extractData));
   }
-  login(data)
-  {
+  login(data){
     console.log("login called");
     console.log(data);
     return this.http.post<any>(BASE_URL + "login", data,this.httpOptions)
     .pipe();
   }
-  logout()
-  {
+  logout(){
     console.log("logging out");
     this.storage.remove('user');
   }

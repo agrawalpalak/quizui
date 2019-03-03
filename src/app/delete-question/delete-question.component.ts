@@ -8,12 +8,6 @@ import { RestService } from '../services/rest.service';
 })
 export class DeleteQuestionComponent implements OnInit {
 
-//   QueAns = [{
-//     "que" : "qwert1"
-//   },
-// {
-//   "que":"qwerty2"
-// }]
 que: any = [];
 
   constructor(private rest: RestService) { }
@@ -27,11 +21,15 @@ que: any = [];
   deleteQuestionById(id){
     console.log(id);
     this.rest.deleteQuestionById(id)
-    .subscribe(id => { console.log(id);
+    .subscribe(id => { 
+      console.log(id);
       this.rest.getAllQuestions().subscribe(resp => {
         console.log(resp);
         this.que = resp;
       });
     });
+  }
+  editQuestionById(id){
+    
   }
 }

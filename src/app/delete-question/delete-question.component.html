@@ -1,19 +1,19 @@
 <form>
-<div class="container">
-<h1>Questions</h1>
-<table>
-    <tr>
-      <th>Questions</th>
-      <th>Delete</th>
-    </tr>
-    <tr *ngFor = "let a of que">
-      <td>{{a.question}}</td>
-      <td><button class="deletebtn" (click)="deleteQuestionById(a.id)">Delete</button> &nbsp; &nbsp;
-         <!-- <button class="editbtn" routerLink="/AddQuestionComponent">Edit</button> </td> -->
-    </tr>
-    
-  </table>
+  <div class="container">
+    <h1 style="background-color: #f1f1f1">Questions</h1>
+    <table>
+      <tr>
+        <th>Questions</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+      <tr *ngFor = "let a of que">
+        <td>{{a.question}}</td>
+        <td><button class="deletebtn" (click)="deleteQuestionById(a.id)">Delete</button></td>
+        <td><button class="editbtn" (click)="editQuestionById(a.id)">Edit</button></td>
+      </tr>
+    </table>
 
-  <button class="exitbtn" routerLink="/AdminStartPageComponent">Exit</button>
-</div>
+    <button class="exitbtn" routerLink="/AdminStartPageComponent">Exit</button>
+  </div>
 </form>

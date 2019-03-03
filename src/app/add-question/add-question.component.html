@@ -1,6 +1,6 @@
 <form [formGroup]="questionForm">
     <div class="container">
-      <h1>Add Question</h1>
+      <h1 style="background-color: #f1f1f1">Add Question</h1>
       
       <hr>
      
@@ -25,8 +25,9 @@
       <label for="answera"><b> Correct Answer </b></label>
       <input type="text"  formControlName="answer" >
 
-      <!-- routerLink="/AdminTestPageComponent" -->
-      <br><br><button type="submit" class="registerbtn" (click) = "addQuestion()">Continue</button>
+      <br><br>
+      <button type="submit" class="registerbtn" (click) = "addQuestion()">Continue</button><br><br>
+      
+      <button type="submit" class="cancelbtn" routerLink="/AdminTestPageComponent">Back</button>
     </div>
-  
-  </form>
+</form>
