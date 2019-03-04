@@ -8,13 +8,14 @@
     </div>
     <div class="form-group">
       <label>Username</label>
-      <input placeholder="Enter username" type="text" formControlName="username">
+      <input placeholder="Enter username" type="text" formControlName="username" (keyup)="checkUserName()">
+      <span *ngIf="usernameExists" style="color:red;font-size:13px;">UserName Exists</span><br>
     </div>
     <div class="form-group">
       <label>Password</label>
       <input placeholder="Enter Password" type="password" formControlName="password">
     </div>
-    <button type="submit">Register</button>
+    <button type="submit" [disabled]="usernameExists">Register</button>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <button class="cancel" routerLink="/login">Cancel</button>
   </form>

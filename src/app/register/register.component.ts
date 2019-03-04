@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { RestService } from '../services/rest.service';
 import {FormGroup, FormControl} from '@angular/forms';
 import {Router} from '@angular/router';
 
@@ -17,12 +18,17 @@ export class RegisterComponent implements OnInit {
     password: new FormControl(),
     role: new FormControl('ROLE_USER')
   });
-  constructor(private auth: AuthService, private router: Router) { }
+  users:any = [];
+  usernameExists: boolean = false;
+  constructor(private auth: AuthService,private rest: RestService, private router: Router) { }
 
   ngOnInit() { 
     this.auth.getConfig().subscribe(resp => {
       console.log(resp);
-    }); 
+    });
+    this.rest.getAllUsers().subscribe(resp => {
+      this.users = resp;
+    })
   }
 
   registerUser()
@@ -32,5 +38,23 @@ export class RegisterComponent implements OnInit {
       console.log(resp);
       this.router.navigate(['login']);
     })
+  }
+  checkUserName()
+  {
+    let a = this.registerForm.controls.username.value;
+    let b = this.users.find( data => {
+
+      if(data.username === a)
+      {
+        return data;
+      }
+    });
+    if(b != null)
+    {
+      this.usernameExists = true;
+    }
+    else{
+      this.usernameExists = false;
+    }
   }
 }

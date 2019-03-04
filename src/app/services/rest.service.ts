@@ -67,6 +67,12 @@ export class RestService {
     .pipe();
   }
 
+  // editQuestionById(q): Observable<any> {
+  //   console.log("edit question called");
+  //   return this.http.post(BASE_URL + "editQuestionById", q, this.httpOptions)
+  //   .pipe();
+  // }
+
   private extractData(res: Response) {
     let body = res;
     return body || { };

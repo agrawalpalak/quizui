@@ -4,10 +4,10 @@
       <h1 style="background-color:#f1f1f1">Result</h1>
       <br>
       <div class="contain">
-        <h3 class="pass">Congratulations!!</h3>
-        <h3 class="fail">Sorry Better Luck Next time</h3>
+        <h3 class="pass" *ngIf="ispass" style="color:green;">Congratulations!!</h3>
+        <h3 class="fail" *ngIf="!ispass" style="color:red;">Sorry Better Luck Next time</h3>
         
-        <h3>You Scored : {{score}}</h3>
+        <h3>You Scored : {{percent}}%</h3>
         
         <button routerLink="/login">Thank You</button>
       </div>

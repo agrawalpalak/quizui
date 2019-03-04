@@ -5,12 +5,12 @@
       <tr>
         <th>Questions</th>
         <th>Delete</th>
-        <th>Edit</th>
+        <!-- <th>Edit</th> -->
       </tr>
       <tr *ngFor = "let a of que">
         <td>{{a.question}}</td>
         <td><button class="deletebtn" (click)="deleteQuestionById(a.id)">Delete</button></td>
-        <td><button class="editbtn" (click)="editQuestionById(a.id)">Edit</button></td>
+        <!-- <td><button class="editbtn" (click)="editQuestionById(a)">Edit</button></td> -->
       </tr>
     </table>
 

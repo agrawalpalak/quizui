@@ -29,7 +29,8 @@ que: any = [];
       });
     });
   }
-  editQuestionById(id){
-    
-  }
+  // editQuestionById(q){
+  //   console.log(q);
+  //   this.rest.editQuestionById(q)
+  // }
 }
