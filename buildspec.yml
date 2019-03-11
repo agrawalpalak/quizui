@@ -3,17 +3,17 @@
 BUILD_ENV: prod
 env: 
   variables: 
-    S3_BUCKET: angular-ui-webapp
+    S3_BUCKET: angular-ui-webapp                      # Destination bucket for the code
 phases: 
   build: 
     commands: 
-      - "echo Build started on `date`"
+      - "echo Build started on `date`"                # building code with prod environment
       - "ng build --${BUILD_ENV}"
   post_build: 
     commands: 
       - "aws s3 rm s3://${S3_BUCKET} --recursive"
-      - "echo S3 bucket is cleared."
-      - "aws s3 cp dist/QuizFrontend s3://${S3_BUCKET} --recursive"
+      - "echo S3 bucket is cleared."                                         
+      - "aws s3 cp dist/QuizFrontend s3://${S3_BUCKET} --recursive"           # clearing and copying data to bucket
       - "echo Build completed on `date`"
   pre_build: 
     commands: 
@@ -26,6 +26,6 @@ phases:
       - "echo \"deb https://dl.yarnpkg.com/debian/ stable main\" | sudo tee /etc/apt/sources.list.d/yarn.list"
       - "sudo apt-get update -y"
       - "sudo apt-get install -y yarn"
-      - "npm install -g @angular/cli@6.0.8"
+      - "npm install -g @angular/cli@6.0.8"                          # At pre build phase installing all dependencies 
       - "npm install"
 version: 0.2
